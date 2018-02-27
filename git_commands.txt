@@ -27,8 +27,12 @@
 	2 git commit -m "review comments"
 	3 git push origin master   (Note: master is the branch name)
 
-4) To check all the modified files in the local repository
+4) To check the currently modified files in the local repository
 	git status
 
-5) Force checkout from master branch to local repository
+5) Checkout files from master branch to local repository
+	git pull
+
+6) Force checkout files from master branch to local repository
 	git checkout -f master
+
