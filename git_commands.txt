@@ -1,0 +1,13 @@
+1) git clone <URL>
+
+2) git status
+
+3) How to add, commit and push files to git server
+	a) git add filename.txt  
+		(or) 
+	   git add .  		(Note: to add all the files)
+	b) git commit -m "review comments"
+	c) git push origin master   (Note: master is the branch name)
+
+4) Force checkout from master branch to local repository
+	git checkout -f master
