@@ -1,13 +1,31 @@
-1) git clone <URL>
+1) How to add a new PC's SSH key to the github account
+	1 Open Gitbash
+	2 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+	3 Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
+	4 Enter passphrase (empty for no passphrase): [Type a passphrase]
+	   Enter same passphrase again: [Type passphrase again]
+	5 eval $(ssh-agent -s)
+	6 ssh-add ~/.ssh/id_rsa
+	7 clip < ~/.ssh/id_rsa.pub
+	8 Login github account. Go to settings displayed in the top right corner
+	9 In the user settings sidebar, click SSH and GPG keys.
+	10 Click New SSH key or Add SSH key.
+	11 In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+	12 Paste your key into the "Key" field.
+	13 Click Add SSH key.
 
-2) git status
+2) How to clone an existing repository to the local folder
+	git clone <URL>
 
 3) How to add, commit and push files to git server
-	a) git add filename.txt  
+	1 git add filename.txt  
 		(or) 
 	   git add .  		(Note: to add all the files)
-	b) git commit -m "review comments"
-	c) git push origin master   (Note: master is the branch name)
+	2 git commit -m "review comments"
+	3 git push origin master   (Note: master is the branch name)
 
-4) Force checkout from master branch to local repository
+4) To check all the modified files in the local repository
+	git status
+
+5) Force checkout from master branch to local repository
 	git checkout -f master
